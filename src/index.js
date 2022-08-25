@@ -1,7 +1,36 @@
 const vacationCalc = document.getElementById('vacationCalc');
 
+const gererateTemplate = (destiny,budget,expenses,balence) => {
+    return `
+    <section class="d-flex justify-content-center ">
+    <div class="card" style="width: 19rem;" >
+    <img src="./asset/img/gif.gif" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title d-flex justify-content-center">${destiny}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Tu presupuesto: S/ ${budget}</li>
+      <li class="list-group-item">Total a gastar: S/ ${expenses}</li>
+      <li class="list-group-item">Tu balance: S/ ${balence}</li>
+    </ul>
+    <div class="card-body">
+      <a href="https://www.tripadvisor.com" class="card-link">hoteles recomendados</a>
+      <a href="https://www.despegar.com.pe/" class="card-link">vuelos al destino</a>
+    </div>
+  </div> 
+  </section>
+    `
 
-const calculateExpenses = () => {
+};
+
+const resultsPrintout = (card) => {
+    const result = document.getElementById('result');
+    result.innerHTML = card;
+};
+    
+
+const calculateExpenses = (e) => {
+    e.preventDefault()
     // debo refactorizar, colocar los id dentro de una funcion y luego desestructurarla en un return
     const destiny = document.getElementById('destiny').value;
     const budget = document.getElementById('budget').value;
@@ -11,18 +40,14 @@ const calculateExpenses = () => {
 
     // utilizamos parsenint()para asegurarnos que todo lo que sea ingresado sea de valor numerico
     let expenses = parseInt(acomodation) + parseInt(transport) + parseInt(food);
-
     let balance = budget - expenses;
-    console.table('presupueto: ', budget, 'resta de todos los input con  presupuesto: ', balance, 'destino: ', destiny);
-}
 
+   return resultsPrintout(gererateTemplate(destiny,budget,expenses,balance));
 
-
-const resultsPrintout = () => {
-    const result = document.getElementById('result');
-    //debo crear un template donde ira el relsultado. esta funcion debe ser llamada en calculateExpenses
-
+    
 }
 
 //El evento submit permite iniciar el envío del formulario
 vacationCalc.addEventListener('submit', calculateExpenses);
+
+

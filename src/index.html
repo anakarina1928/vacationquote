@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" class="logo" href="./asset/img/viajar.png">
   <title>VacationQuote</title>
   <link rel="stylesheet" href="./style.css" />
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
 />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,600;0,800;1,100;1,400&family=Rubik+Dirt&display=swap" rel="stylesheet">
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
@@ -23,9 +27,34 @@
 
 <body>
 
-  <nav class="navbar ">
-    <h2>VacationQuote</h2>
-  </nav>
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo">VacationQuote</h1>
+      
+    </div>
+  </header>
+
+  <section id="hero" class="presentation d-flex justify-content-center align-items-center">
+
+    <div class="container">
+      <div class="row d-flex justify-content-around">
+        <div class="col-lg-6 presentation  order-2 order-lg-1 d-flex flex-column justify-content-center">
+          
+          <h1 class="logo-h1" >Cotizador de viajes a tu manera</h1>
+          <h3 class="presentation ">Con la finalidad de brindarle un mejor servicio le solicitamos por favor nos brinde la siguiente información</h3>
+          <a href="#vacationCalc">
+            <button  class=" button  d-flex justify-content-end align-content-center">COTIZAR</button> 
+          </a>
+         
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 d-flex justify-content-lg-end  justify-content-md-center">
+          <img src="./asset/img/viajar.png" class=" animated " alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  
   <section class="container">
     <div class="row">
       <div class="main  col-lg-6">
@@ -35,17 +64,14 @@
           <input type="number" placeholder="Acomodation" id="acomodation" required />
           <input type="number" placeholder="transporte" id="transport" required />
           <input type="number" placeholder="Alimento" id="food" required />
-         
-          <button class="btn btn-primary" type="submit">CARCULAR</button>
+         <div class="">
+          <button class="button  align-content-center " type="submit">CARCULAR</button>
+        </div>
         </form>
       </div>
 
-      <div class="col-lg-6">
-        <div class="icons">
-          <h5><i class="fas fa-plane"></i></h5>
-          <h5><i class="fas fa-wallet"></i></h5>
-          <h5><i class="fas fa-money-bill-wave-alt"></i></h5>
-        </div>
+      <div class="col-lg-6 ">
+       
 
         <div class="data">
           <div class="result" id="result">
@@ -97,8 +123,8 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>About Moderna</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <h3>VacationQuote</h3>
+            <p>Comienza tu viaje con todo listo y prepárate para hacer hermosos recuerdos que atesorarás toda tu vida.</p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
