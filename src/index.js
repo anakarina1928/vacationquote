@@ -3,15 +3,15 @@ const vacationCalc = document.getElementById('vacationCalc');
 const gererateTemplate = (destiny,budget,expenses,balence) => {
     return `
     <section class="d-flex justify-content-center ">
-    <div class="card" style="width: 18rem;">
-    <img src="./asset/img/20%.png" class="card-img-top" alt="...">
+    <div class="card" style="width: 19rem;" >
+    <img src="./asset/img/gif.gif" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title d-flex justify-content-center">${destiny}</h5>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Tu presupuesto: ${budget}</li>
-      <li class="list-group-item">Total a gastar: ${expenses}</li>
-      <li class="list-group-item">Tu balance: ${balence}</li>
+      <li class="list-group-item">Tu presupuesto: S/ ${budget}</li>
+      <li class="list-group-item">Total a gastar: S/ ${expenses}</li>
+      <li class="list-group-item">Tu balance: S/ ${balence}</li>
     </ul>
     <div class="card-body">
       <a href="https://www.tripadvisor.com" class="card-link">hoteles recomendados</a>
@@ -49,3 +49,5 @@ const calculateExpenses = (e) => {
 
 //El evento submit permite iniciar el envío del formulario
 vacationCalc.addEventListener('submit', calculateExpenses);
+
+
