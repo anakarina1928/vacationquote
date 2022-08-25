@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VacationQuote</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+/>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav class="navbar nav ">
+    <h2>VacationQuote</h2>
+  </nav>
+  <section class="container">
+    <div class="row">
+      <div class="main col-lg-6">
+        <form id="vacationCalc">
+          <input type="text" placeholder="Destiny" id="destiny" required />
+          <input type="number" placeholder="Budget" id="budget" required />
+          <input type="number" placeholder="Acomodation" id="acomodation" required />
+          <input type="number" placeholder="Transport " id="transport" required />
+          <input type="number" placeholder="Food" id="food" required />
+         
+          <button class="btn btn-primary" type="button">CARCULAR</button>
+        </form>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="icons">
+          <h5><i class="fas fa-plane"></i></h5>
+          <h5><i class="fas fa-wallet"></i></h5>
+          <h5><i class="fas fa-money-bill-wave-alt"></i></h5>
+        </div>
+
+        <div class="data">
+          <div class="result" id="result"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--HASTA AQUI-->
+
+ 
+
+  <script src="./index.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
