@@ -72,7 +72,9 @@
     justify-content: space-around;
     margin-top: -1em;
   }
-  
+  .data{
+    padding: 6rem 0 2rem;
+  }
   .container-data h6 {
     text-align: center;
   }
