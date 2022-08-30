@@ -1,5 +1,9 @@
 const vacationCalc = document.getElementById('vacationCalc');
 
+function reload() {
+  document.getElementById('form-vacation').reset();
+}
+
 const gererateTemplate = (destiny,budget,expenses,balence) => {
     return `
     <section class="d-flex justify-content-center ">
@@ -27,6 +31,8 @@ const resultsPrintout = (card) => {
     const result = document.getElementById('result');
     result.innerHTML = card;
 };
+
+
     
 
 const calculateExpenses = (e) => {
@@ -41,8 +47,9 @@ const calculateExpenses = (e) => {
     // utilizamos parsenint()para asegurarnos que todo lo que sea ingresado sea de valor numerico
     let expenses = parseInt(acomodation) + parseInt(transport) + parseInt(food);
     let balance = budget - expenses;
-
-   return resultsPrintout(gererateTemplate(destiny,budget,expenses,balance));
+    const resultFinally = resultsPrintout(gererateTemplate(destiny,budget,expenses,balance));
+    reload()
+   return resultFinally;
 
     
 }
